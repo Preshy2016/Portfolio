@@ -1,29 +1,88 @@
+/* Navbar Styling */
 .navbar {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
-  transition: background 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); /* Gradient background */
+  backdrop-filter: blur(15px); /* Apply blur to the background */
+  padding: 15px 40px;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Border at the bottom */
 }
 
-.navbar:hover {
-  background: #555;
-}
-
-.navbar ul {
-  list-style-type: none;
+/* Centering the list */
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.navbar li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.navbar a {
-  color: #fff;
+/* Navbar items */
+.navbar-item {
+  color: white;
   text-decoration: none;
+  margin: 0 20px;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif; /* Modern font */
+  font-weight: bold;
+  letter-spacing: 1px; /* Add spacing between letters */
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
+/* Hover Effect: Animation */
+.navbar-item:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  color: #f5a623; /* Warm orange color on hover */
+  text-shadow: 0 0 15px rgba(255, 165, 35, 0.7); /* Add glow effect */
+}
+
+/* Add subtle animations for the navbar items when the page loads */
+.navbar-item {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.navbar-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.navbar-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.navbar-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.navbar-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Fade-in animation for navbar items */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar-list {
+    flex-direction: column;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+    font-size: 18px;
+  }
 }

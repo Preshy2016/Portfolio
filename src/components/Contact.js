@@ -4,7 +4,9 @@ import './Other.css';
 const Contact = () => {
   return (
     <section id="contact" className="contact animate__animated animate__fadeIn">
-      <h2>Contact Me</h2>
+      <h2>Get in Touch</h2>
+      <p>I'd love to hear from you! Whether you have questions, want to collaborate, or just want to say hello, feel free to reach out. I'll get back to you as soon as possible.</p>
+      
       <form>
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
